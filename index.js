@@ -1,10 +1,12 @@
 import express from 'express';
 import fetch from 'node-fetch';
+import cors from 'cors'
 const app = express()
 const port = 5000;
 
 //middleware
 app.use(express.json())
+app.use(cors())
 
 
 app.get('/users', async (req, res) => {
